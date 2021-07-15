@@ -115,7 +115,7 @@ After running above command you will get the
 url
 
 
-### Automation Options
+### Automation tools
 We have the following options to choose from
 - [x] npm scripts
 - [ ] Grunt
@@ -124,3 +124,48 @@ We have the following options to choose from
 npm scripts are declared in the script section of your package.json file. With npm scripts you can directly leverage all the power of operating system command line.
 
 npm scripts also offer convention based hooks for running other scripts before and after your scripts
+
+
+### Transpiling
+
+We have the following options to choose from
+- [x] Babel
+- [ ] TypeScript
+
+* **babel**
+- Write standardized JS
+- Leverage full JS Ecosystem
+- Use experimental features earlier
+- No type defs, annotation required
+
+* **typescript**
+
+- Enhanced Automcomplete
+- Enhanced readability
+- Safer refactoring
+- Additional non standard featires
+- It has own complier but we can use babel to compile TypeScript
+
+
+```
+@babel/preset-env
+```
+This package is a smart preset that compiles our JS down to run in all recent browsers
+
+
+#### Bable Configuration Styles
+
+- `.babelrc`
+* Most common approach in which we place this file at the root dorectory of the project
+* not npm specific
+* Easier to read since isolated
+
+- `package.json`
+* One less file in your project
+* `"babel":{}` need to add this in package.json
+
+
+```
+  "targets":">0.25%, not dead"
+```
+above config tells babel, to support all browser used by more that .25% people that are still officially supported by their creator

@@ -24,7 +24,6 @@ app.listen(PORT, (err)=>{
   } else {
     open(`http://localhost:${PORT}`)
     console.log(chalk.green(`Server is running on http://localhost:${PORT}`))
-
   }
 })
 
