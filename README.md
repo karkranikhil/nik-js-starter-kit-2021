@@ -113,3 +113,14 @@ lt --port 3000 --subdomain nik
 ```
 After running above command you will get the
 url
+
+
+### Automation Options
+We have the following options to choose from
+- [x] npm scripts
+- [ ] Grunt
+- [ ] Gulp
+
+npm scripts are declared in the script section of your package.json file. With npm scripts you can directly leverage all the power of operating system command line.
+
+npm scripts also offer convention based hooks for running other scripts before and after your scripts
