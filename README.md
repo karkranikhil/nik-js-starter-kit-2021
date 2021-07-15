@@ -13,6 +13,10 @@
 - Automated checklist to avoid common mistakes
 
 
+### Command to run our web server
+```
+node buildScripts/srcServer.js
+```
 
 
 ### Editors and configuration
@@ -61,3 +65,51 @@ We have the following options to choose from
 ```
 npm audit --fix
 ```
+
+### Development web server
+We have the following options to choose from
+- [x] Express
+- [ ] http-server
+- [ ] Webpack dev server
+- [ ] Browsersync
+
+We configure our webserver so it's aautomatically started as a part of our development process and open our application so we can review our results immedietly on browser.
+
+We are choosing server that's focused on javascript local development, highly configurable and powerful
+
+| http-server  	|  Express 	|   webpack dev server	|  Browsersync 	|
+|---	|---	|---	|---	|
+| Ultra-simple  	|  Comprehensive 	|   Built in to web server	|   Dedicated IP for sharing work on LAN	|
+|  Single command serves current directory 	|  Highly Configurable 	|   Serves form memory	|  All interactions remain in sync 	|
+|  No configuration 	|   Production gradeProduction grade	|  includes hot reloading 	|  Great for cross-device testing 	|
+|  - 	|   Can run it everywhere	|   Integrate with gulp, webpack etc	|   -	|
+
+
+### Sharing work with url
+If you want to quickly share your work on the public web so your client can review your work in progress without paying anything
+
+We have the following options to choose from
+- [x] localtunnel
+- [ ] ngrok
+- [ ] Surge
+- [ ] Vercel
+
+| localtunnel  	|  ngrok 	| vercel  	|  Surge 	|
+|---	|---	|---	|---	|
+|  Easily share work on your local machine 	| Secure tunnel to your local machine  	|  quickly deploy Node.js to cloud 	|  Quickly host static files to public URL 	|
+| npm install localtunnel -g	|  require additional setup to achive extra power 	|  Each time you deploy, you're assigned to a new unique URL 	|  Extreme simple, Surge publishes your static files to their services and then serves them to public url 	|
+|  `npm install localtunnel -g`,  ` lt --port 3000 --subdomain nik` 	|   Sign up, `install ngrok`, install authtoken, start your app, ./ngrok http 80	|   `npm install -g vercel`, create start script, vercel	| `npm install -g surge`,  surge  	|
+
+
+Surge and Vercel is permanent solution, you don't have to keep your machine open until people to see your work in progress but surge only supports static fiels.
+
+* Vercel also support node js projects
+
+Note** we are using localtunnel
+
+```
+npm install localtunnel -g
+lt --port 3000 --subdomain nik
+```
+After running above command you will get the
+url
