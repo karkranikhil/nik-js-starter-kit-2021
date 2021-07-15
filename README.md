@@ -12,12 +12,13 @@
 
 - Automated checklist to avoid common mistakes
 
+---
 
 ### Command to run our web server
 ```
 node buildScripts/srcServer.js
 ```
-
+---
 
 ### Editors and configuration
 We have the following options to choose from
@@ -39,6 +40,7 @@ We choose the editor based on the following points
 4) Rich plugins Ecosystem
 5) Cost effective
 
+---
 ### Automated Formating
 - [ ] Prettier - it automatically format your code on save
 - [x] EditorConfig - It helps you to maintain consistent coding styles between different editors and IDEs.
@@ -48,7 +50,7 @@ Note** - In `editorConfig` file we specify how editor should handle common setti
 ** Plugin installed in vscode after adding the file  `.editorconfig` is mentioned below
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 
-
+---
 ### Package Manager
 We have the following options to choose from
 - [x] npm
@@ -59,12 +61,15 @@ We have the following options to choose from
 - [ ] volo
 
 `npm` is the larget package manager in the workd with over 1 million packages.
+
+---
 ### Security Scanning by npm
 - Audits are built into npm that gives us the warning message if there is a known vulnerability in a package
 
 ```
 npm audit --fix
 ```
+---
 
 ### Development web server
 We have the following options to choose from
@@ -84,6 +89,7 @@ We are choosing server that's focused on javascript local development, highly co
 |  No configuration 	|   Production gradeProduction grade	|  includes hot reloading 	|  Great for cross-device testing 	|
 |  - 	|   Can run it everywhere	|   Integrate with gulp, webpack etc	|   -	|
 
+---
 
 ### Sharing work with url
 If you want to quickly share your work on the public web so your client can review your work in progress without paying anything
@@ -114,6 +120,7 @@ lt --port 3000 --subdomain nik
 After running above command you will get the
 url
 
+----
 
 ### Automation tools
 We have the following options to choose from
@@ -125,6 +132,7 @@ npm scripts are declared in the script section of your package.json file. With n
 
 npm scripts also offer convention based hooks for running other scripts before and after your scripts
 
+---
 
 ### Transpiling
 
@@ -152,15 +160,15 @@ We have the following options to choose from
 ```
 This package is a smart preset that compiles our JS down to run in all recent browsers
 
+---
+#### Babel Configuration Styles
 
-#### Bable Configuration Styles
-
-- `.babelrc`
+-- Using `.babelrc` --
 * Most common approach in which we place this file at the root dorectory of the project
 * not npm specific
 * Easier to read since isolated
 
-- `package.json`
+-- Using `package.json` --
 * One less file in your project
 * `"babel":{}` need to add this in package.json
 
@@ -169,3 +177,41 @@ This package is a smart preset that compiles our JS down to run in all recent br
   "targets":">0.25%, not dead"
 ```
 above config tells babel, to support all browser used by more that .25% people that are still officially supported by their creator
+---
+
+### Modules formats
+We have different type of modules formats
+- [x] ES6 Modules
+- [ ] CommonJS (CJS)
+- [ ] UMD (Universal Module Definition)
+- [ ] AMD (Asynchronous Module Definition)
+- [ ] IIFE (Immediately-invoked function expressions)
+
+* ES6 modules are standardized
+* Cleaner, Easy to read, improved autocomplete
+* intelligent refactoring
+* Tree Shaking - dead code elimination
+* Named imports and Default exports
+
+CommonJS doesn't work in web browser aand so we need to bundle npm packages into a format that the browser can consume
+---
+### Bundling
+We use bundler to package any JavaScript into a single file or seperate file.
+
+We have different type of modules formats
+
+- [x] Webpack
+- [ ] Rollup
+- [ ] Parcel
+- [ ] Snowpack
+- [ ] Browserify
+---
+* Webpack bundles more than just JS
+* Webpack offers a huge ecosystem of loaders so you can easily so we can instruct webpack to intelligently handle html, CSS, Images, fonts, etc
+* Webpack includes built in hot-reloading web server
+* Webpack serve files from memory which speeds up the development builds and automatically updates
+* code spliting
+
+### Sourcemaps
+
+Sourcemaps map the bundled, transpiled and minified code back to orignal source.
