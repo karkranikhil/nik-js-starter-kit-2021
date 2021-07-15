@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript development Starter kit",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "prestart":"node buildScripts/startMessage.js",
-    "start": "node buildScripts/srcServer.js",
+    "prestart":"babel-node buildScripts/startMessage.js",
+    "start": "babel-node buildScripts/srcServer.js",
     "localtunnel":"lt --port 3000",
     "share":"npm-run-all --parallel start localtunnel"
 
