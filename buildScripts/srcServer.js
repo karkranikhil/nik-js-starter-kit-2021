@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import open from 'open'
+import chalk from 'chalk'
 
 //Fetching Directory path
 const __dirname = path.resolve();
@@ -22,7 +23,8 @@ app.listen(PORT, (err)=>{
     console.log(err)
   } else {
     open(`http://localhost:${PORT}`)
-    console.log(`Server is running on http://localhost:${PORT}`)
+    console.log(chalk.green(`Server is running on http://localhost:${PORT}`))
+
   }
 })
 
