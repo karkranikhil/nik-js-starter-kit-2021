@@ -344,3 +344,4 @@ When your team commits code it's handy to confirm immediately that the commit wo
 
 
 Travis and Jenkins are the most popular solution but Travis is the hosted solution and with jenkins you have to host your CI server your own
+
