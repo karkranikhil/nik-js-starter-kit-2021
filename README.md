@@ -215,3 +215,55 @@ We have different type of modules formats
 ### Sourcemaps
 
 Sourcemaps map the bundled, transpiled and minified code back to orignal source.
+
+
+#### Linting
+Linters are so powerful that they can catch many errors at compile time.
+
+* Linters programmatically enforce consistency and provide raapid feedbaack to catch error during development.
+- Example - Curly braces position, trailing commas, Global variable, stop eval etc.
+
+* Linter avoid mistakes like Overwriting functions, assignment in conditional, Extra parenthesis
+
+
+We have the following options to choose from
+- [x] Eslint
+- [ ] JSLint
+- [ ] JSHint
+
+### ESlint Decisions
+- Config format
+- WHich built in rules
+- warning or errors
+- Which plugins
+- Use preset instead
+
+**Config format**
+- .eslintrc.js - export and object containing configuration
+- .eslintrc.yaml - define configuration structure
+- .eslintrc.yml - define configuration structure
+- .eslintrc.json - define configuration structure in JSON format
+- .eslintrc - deprecated
+- package.json - create `eslintConfig` property in package.json
+
+**warning vs erros**
+- warning can continue development, caan be ignored
+- erros breaks the build and can't be ignored
+
+
+**eslint plugins**
+
+https://github.com/dustinspecker/awesome-eslint
+
+**Use a preset**
+
+ESlint comes with lot of logical defaults that save you a lot of time. We can use an existing set of rules like airbnbs, xo etc
+
+**`Note`**
+ESLint doesn't watch files
+
+`eslint-watch `is a npm packages that adds file waatch
+
+
+**`Note`**
+ESLint doesn't supports experimental feature for that we have to use `babel-eslint`
