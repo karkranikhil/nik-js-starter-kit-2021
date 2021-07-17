@@ -4,6 +4,7 @@ import open from 'open'
 import chalk from 'chalk'
 import webpack from 'webpack'
 import config from '../webpack.config.dev'
+/* eslint-disable no-console */
 
 //Fetching Directory path
 const __dirname = path.resolve();
