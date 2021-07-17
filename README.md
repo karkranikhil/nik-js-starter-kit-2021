@@ -216,8 +216,8 @@ We have different type of modules formats
 
 Sourcemaps map the bundled, transpiled and minified code back to orignal source.
 
-
-#### Linting
+---
+### Linting
 Linters are so powerful that they can catch many errors at compile time.
 
 * Linters programmatically enforce consistency and provide raapid feedbaack to catch error during development.
@@ -231,7 +231,7 @@ We have the following options to choose from
 - [ ] JSLint
 - [ ] JSHint
 
-### ESlint Decisions
+#### ESlint Decisions
 - Config format
 - WHich built in rules
 - warning or errors
@@ -267,3 +267,80 @@ ESLint doesn't watch files
 
 **`Note`**
 ESLint doesn't supports experimental feature for that we have to use `babel-eslint`
+
+### Testing
+
+- Unit testing focus on testing of single function or module in an automated fashion.
+- Unit tests often asserts that a certain function return an expected value when past certain parameters
+- Unit tests mock out external dependencies like APIs database calls, and fiile system interactions so the results are fast and deterministic
+
+#### Unit Testing Decisions
+- Framework
+- Assertion Library
+- Helper LIbraries
+- Where to run test
+- Where to places test
+- When to run tests
+
+*We have the following options to choose from Frameworks*
+- [x] Mocha
+- [ ] Mocha
+- [ ] Jasmine
+- [ ] QUnit
+- [ ] Ava
+- [ ] Jest
+
+I aam using MOchaa because it's popular, mature, flexible and large ecosystem of support
+
+*We have the following options to choose from Assertion library*
+- [x] Chai
+- [ ] Should.js
+- [ ] expect
+
+*We have the following options to choose from Helper library*
+- [x] JSDOM - simulate the browser's DOM and also run DOM-related tests without a browser
+- [ ] Cheerio - jQuery for Server
+- [ ] expect
+
+*Where to RUN TEST*
+- [x] In-memory DOM - JSDOM (lightweight alternative to headless chrome)
+- [ ] Browser - Karma, Testem
+- [ ] Headless Browser - A browser that doesn't have a visible user interface
+
+*Where to put test files*
+- [x] Alongside - keep in same folder, Easy import, provides clear visibility
+- [ ] Centeralized - Less confusion in src folder, too much path confusions
+
+*Where should our Unit test run*
+- [x] On Hit Save - Rapid feedback, Facilitates TDD, increase test visibility
+
+
+
+### Continuous Integration
+
+When your team commits code it's handy to confirm immediately that the commit works as expected when on another machine that's what a CI server is for.
+- CI server catches the number of potentials mistakes like
+  * Forgot to commit new files
+  * forgot to update package.json
+  * commit doesn't run cross platform
+  * Node version conflicts
+  * Bad merge
+  * Didn't run tests
+  * etc.
+
+#### Continuous Integration Server
+- Run automated build
+- Run your tests
+- Check code coverage
+- Automated deployment
+
+*We have the following options to choose *
+- [x] Travis CI - Linux based
+- [ ] Appveyor - Windows based
+- [ ] Jenkins
+- [ ] circle CI
+- [ ] Semaphore
+- [ ] SnapCI
+
+
+Travis and Jenkins are the most popular solution but Travis is the hosted solution and with jenkins you have to host your CI server your own
