@@ -13,7 +13,7 @@ describe('testing index.html', () =>{
     const {JSDOM} = jsdom
     const dom = new JSDOM(index)
     const h1 = dom.window.document.getElementsByTagName("h1")[0]
-    expect(h1.innerHTML).to.equal("Hello World")
+    expect(h1.innerHTML).to.equal("Hurray!! Your Starter Kit is UP and RUNNING!!")
     dom.window.close()
   })
 
