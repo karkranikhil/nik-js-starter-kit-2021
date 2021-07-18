@@ -389,5 +389,45 @@ It means that you can recieve consistently instantaneous responses.
 - Mock API
 - Automated deployment
 
-### Project structures
-- avoid `<script>` tags because it reduce the reusability and testing
+## Production Build
+- **Minification** to speed page loads
+- **Sourcemaps** to support debugging in production
+- **Dynamic HTML** to handle prooduction-specific concerns
+- **Cache busting** to ensure user recieve latest code on deployment
+- **Bundle splitting** to ensure users don't have to download the entire application when just part of changes
+- **Error logging** to see bugs in productions
+
+
+## Minification
+- It is used to speed up the page load and save bandwidth
+- Shortern varibale and function names
+- removes comments
+- removes whitespaces and new lines
+- Dead code elimination/Tree shakig
+- Debug via sourcemap
+
+## Dynamic HTML
+- Reference bundles automatically
+- Handle dynamic bundle name
+- inject production only resources
+
+## Bundle Splitting
+- Speed initial page load
+- Avoid re-loading all libraries
+
+## Cache Busting
+This mean after someone downloads your javascript file they won't make another HTTP request for that file  up to one year
+
+- Save HTTP requests
+- force request for latest version
+
+## Error logging
+[x] track.js
+
+TrackJS makes finding and fixing client-side errors simple.
+
+choose logging serve based on the following points
+- provide bettwe metadata like stack trace, previous action, custom api for enhanced tracking
+- Notification & integration
+- Analytics and filteriing
+- pricing

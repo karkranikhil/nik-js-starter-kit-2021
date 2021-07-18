@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <% if(htmlWebpackPlugin.options.trackJSToken){%>
+    <script>
+      window.TrackJS && TrackJS.install({
+        token: '<%=htmlWebpackPlugin.options.trackJSToken%>'
+        // for more configuration options, see https://docs.trackjs.com
+      });
+    </script>
+  <% } %>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +19,5 @@
 </head>
 <body>
 <h1>Hello World</h1>
-<script src="bundle.js"></script>
 </body>
 </html>
