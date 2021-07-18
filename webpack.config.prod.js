@@ -21,7 +21,7 @@ export default {
     }),
     new HtmlWebpackPlugin({
       template:"src/index.html",
-      trackJSToken:"590097809ce24705b5a7444b5f656786"
+      trackJSToken:"" //Insert your track js token
     })
   ],
   module: {
