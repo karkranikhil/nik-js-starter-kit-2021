@@ -14,7 +14,7 @@
 
 ---
 
-### Command to run our web server
+### Command to run starter kit
 
 **Development**
 ```

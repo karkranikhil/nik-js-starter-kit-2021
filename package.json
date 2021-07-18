@@ -33,7 +33,9 @@
     "compression",
     "starter kit",
     "javascript 2021",
-    "babel"
+    "babel",
+    "surge",
+    "es6"
   ],
   "author": "Nikhil karkra <karkra.nikhil@gmail.com>",
   "license": "MIT",
