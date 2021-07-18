@@ -334,7 +334,7 @@ When your team commits code it's handy to confirm immediately that the commit wo
 - Check code coverage
 - Automated deployment
 
-*We have the following options to choose *
+*We have the following options to choose*
 - [x] Travis CI - Linux based
 - [ ] Appveyor - Windows based
 - [ ] Jenkins
@@ -345,3 +345,49 @@ When your team commits code it's handy to confirm immediately that the commit wo
 
 Travis and Jenkins are the most popular solution but Travis is the hosted solution and with jenkins you have to host your CI server your own
 
+#### HTTP Calls
+Every Javascript application we build today makes HTTP Calls
+
+
+*We have the following options to choose*
+- [ ] http - Node
+- [ ] request - Node
+- [ ] XMLHttpRequest - Browser
+- [ ] $.Ajax - Browser
+- [x] Fetch - Browser
+- [ ] isomorphic-fetch - run both on Node & Browser
+- [ ] xhr - run both on Node & Browser
+- [ ] Axios - run both on Node & Browser
+- [ ] SuperAgent - run both on Node & Browser
+
+#### Mocking HTTP Calls
+
+It means that you can recieve consistently instantaneous responses.
+- Helps in rapid prototyping
+- Helps to keep the work up and running when services are down
+- Work offline
+
+
+*We have the following options to choose*
+- [ ] Nock
+- [ ] Static JSON
+- [x] JSON server
+- [ ] api-mock
+- [x] JSON Schema faker
+
+## Generate Random Data
+ - faker.js
+ - chance.js
+ - randexp.js
+
+
+
+## Demo App
+- Directory structure and file naming
+- Framework usafe
+- Testing
+- Mock API
+- Automated deployment
+
+### Project structures
+- avoid `<script>` tags because it reduce the reusability and testing

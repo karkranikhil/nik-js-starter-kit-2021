@@ -28,6 +28,15 @@ app.get('/', (req, res)=>{
   res.sendFile(path.join(__dirname, './src/index.html'))
 })
 
+//Mock API to serve user data
+app.get('/users', (req, res)=>{
+  res.json([
+    {"id":1, "Name":"Nik"},
+    {"id":2, "Name":"Mike"},
+    {"id":3, "Name":"Smith"}
+  ])
+})
+
 //listening app and opening app
 app.listen(PORT, (err)=>{
   if(err){
