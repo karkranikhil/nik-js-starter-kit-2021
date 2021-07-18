@@ -14,9 +14,21 @@
 
 ---
 
-### Command to run our web server
+### Command to run starter kit
+
+**Development**
 ```
-node buildScripts/srcServer.js
+npm start
+```
+
+**Production**
+```
+npm run build
+```
+
+**Deployment**
+```
+npm run deploy
 ```
 ---
 
@@ -431,3 +443,20 @@ choose logging serve based on the following points
 - Notification & integration
 - Analytics and filteriing
 - pricing
+
+
+## Seperate UI and API
+1. Simple, low risk and ui only deploy
+2. Seperate teams and sperates concerns
+3. Scale back-end separately
+4. UI hosting is cheap and handling is easy independently
+
+## Cloud hosting
+
+- [] AWS
+- [ ] Azure
+- [X] Heroku - Used for API
+- [ ] Firebase
+- [x] Surge - used for UI
+- [ ] Netlify
+- [ ] Heroku

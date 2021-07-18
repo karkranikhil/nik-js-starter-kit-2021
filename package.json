@@ -19,8 +19,8 @@
     "clean-dist":"rimraf ./dist && mkdir dist",
     "prebuild":"npm-run-all clean-dist test lint",
     "build":"babel-node buildScripts/build.js",
-    "postbuild":"babel-node buildScripts/distServer.js"
-
+    "postbuild":"babel-node buildScripts/distServer.js",
+    "deploy":"surge ./dist"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,9 @@
     "compression",
     "starter kit",
     "javascript 2021",
-    "babel"
+    "babel",
+    "surge",
+    "es6"
   ],
   "author": "Nikhil karkra <karkra.nikhil@gmail.com>",
   "license": "MIT",
